@@ -37,6 +37,11 @@ rm -rf pyRock
 Simply run install_service.sh file with root access and `sh` command like this...
 >sudo sh install_service.sh
 
+### Example of GPIO pin connections
+One 100 ohm resistor is connected to ground line of breadboard which will be connected with 7 segs ground pins.
+Other 7 seg pins are connected to bunch of 3.3v GPIO pins on Radxa lite.
+![alt tag](https://raw.github.com/chidea/pyGPIOclock/master/dist/image/IMG_20150624_060722_HDR.jpg)
+
 ### Features that may come in future...
 - Pin configuration file
 - Dot beeping & configuration to show periods of a second.
