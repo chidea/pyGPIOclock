@@ -1,0 +1,35 @@
+#! /bin/sh
+# /etc/init.d/gpio_clock
+#
+
+start(){
+  echo "starting gpio clock"
+  python /home/rock/clock.py&
+}
+stop(){
+  echo "stopping gpio clock"
+  pkill -o -f python.*/clock.py #ps -eaf #for further investigation
+}
+case "$1" in
+  stop)
+    stop
+    ;;
+  start|restart|reload)
+    stop
+    start
+    ;;
+  *)
+    echo "Usage: /etc/init.d/gpio_clock {start|stop|restart|reload}"
+    exit 1
+    ;;
+esac
+
+exit 0
+
+# to install
+# sudo chmod 755 /etc/init.d/gpio_clock
+# sudo update-rc.d gpio_clock defaults
+
+# to uninstall
+# rm /etc/init.d/gpio_clock
+# sudo update-rc.d gpio_clock remove

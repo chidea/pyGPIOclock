@@ -1,0 +1,43 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          gpio_clock
+# Required-Start:    $local_fs
+# Required-Stop:     $local_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: electronic clock through gpio and 7 segments
+### END INIT INFO
+# /etc/init.d/gpio_clock
+#
+
+start(){
+  echo "starting gpio clock"
+  python3 /home/pi/clock.py&
+}
+stop(){
+  echo "stopping gpio clock"
+  pkill -o -f python3.*/clock.py #ps -eaf #for further investigation
+}
+case "$1" in
+  stop)
+    stop
+    ;;
+  start|restart|reload)
+    stop
+    start
+    ;;
+  *)
+    echo "Usage: /etc/init.d/gpio_clock {start|stop|restart|reload}"
+    exit 1
+    ;;
+esac
+
+exit 0
+
+# to install
+# sudo chmod 755 /etc/init.d/gpio_clock
+# sudo update-rc.d gpio_clock defaults
+
+# to uninstall
+# rm /etc/init.d/gpio_clock
+# sudo update-rc.d gpio_clock remove
