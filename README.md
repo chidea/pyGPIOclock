@@ -15,16 +15,13 @@ Currently the developer myself has no more money to add any embedded systems on 
 - Radxa lite
   - python (may installed by default)
   - pyRock
-
 ```
-
 sudo apt-get install gcc python-dev
 git clone https://github.com/radxa/pyRock.git
 cd pyRock
 sudo python setup.py install
 cd ..
 rm -rf pyRock
-
 ```
 
 ### Features
@@ -38,7 +35,7 @@ Simply run install_service.sh file with root access and `sh` command like this..
 ### Example of GPIO pin connections
 One 100 ohm resistor is connected to ground line of breadboard which will be connected with 7 segs ground pins.
 Other 7 seg pins are connected to bunch of 3.3v GPIO pins on Radxa lite.
-![alt tag](https://raw.github.com/chidea/pyGPIOclock/master/gh-pages/image/IMG_20150624_060722_HDR.jpg)
+![alt tag](https://raw.github.com/chidea/pyGPIOclock/master/gh-pages/image/IMG_20150624_060722_HDR_resize.png)
 
 ### Features that may come in future...
 - Pin configuration file
