@@ -3,8 +3,6 @@ A digital wall clock which utilizes seven segments connected to raspberry pi and
 
 ## Test and verified on
 - Raspberry pi B+
-
-## Test and verify going on
 - Radxa lite
 
 Currently the developer myself has no more money to add any embedded systems on the list.
@@ -35,7 +33,7 @@ rm -rf pyRock
 
 ### How to add as service
 Simply run install_service.sh file with root access and `sh` command like this...
->sudo sh install_service.sh
+`sudo sh install_service.sh`
 
 ### Example of GPIO pin connections
 One 100 ohm resistor is connected to ground line of breadboard which will be connected with 7 segs ground pins.
