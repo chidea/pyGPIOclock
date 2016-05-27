@@ -41,6 +41,7 @@ git clone https://github.com/chidea/pyGPIOclock.git && cd pyGPIOclock && sudo sh
 One 150 ohm resistor is connected to ground line of breadboard which will be connected with 7 segs ground pins.
 Other 7 seg pins are connected to bunch of 3.3v GPIO pins on Radxa lite.
 ![alt tag](https://raw.github.com/chidea/pyGPIOclock/master/gh-pages/image/IMG_20150624_060722_HDR_resize.png)
+![alt tag](https://raw.github.com/chidea/pyGPIOclock/master/gh-pages/scheme/radxa_scheme.png)
 
 ### Features that may come in future...
 - Pin configuration file
